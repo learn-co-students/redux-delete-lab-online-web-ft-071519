@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 
-class Band extends Component {
+const Band = props => {
+  debugger
 
-  render() {
-    return(
-      <div>
-        Band Component
-      </div>
-    );
-  }
+  return (
+
+    <div>
+      <ul>
+        <li>{props.band.name}</li><button onClick={() => props.delete(props.band.id)}>DELETE</button>
+      </ul>
+    </div>
+  );
+
 };
 
 export default Band;
